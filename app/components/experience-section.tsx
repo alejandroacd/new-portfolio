@@ -82,12 +82,12 @@ export function ExperienceSection() {
 
         <div className="space-y-12">
           {experiences.map((exp) => (
-            <div key={exp.period} className="timeline-item relative pl-8">
+            <div key={exp.period} className="timeline-item group relative pl-8">
               {/* Dot */}
-              <div className="absolute left-0 top-2 h-[15px] w-[15px] rounded-full border-2 border-zinc-600 bg-[#080808]" />
+              <div className="absolute left-0 top-2 h-[15px] w-[15px] rounded-full border-2 border-zinc-600 bg-[#080808] transition-all duration-300 group-hover:border-violet-400 group-hover:scale-110 group-hover:shadow-[0_0_0_5px_rgba(167,139,250,0.08),0_0_14px_rgba(167,139,250,0.25)]" />
 
-              <h3 className="text-lg font-bold text-zinc-100">{exp.role}</h3>
-              <p className="mt-0.5 text-sm text-zinc-400">
+              <h3 className="text-lg font-bold text-zinc-100 transition-colors duration-200 group-hover:text-white">{exp.role}</h3>
+              <p className="mt-0.5 text-sm text-zinc-400 transition-colors duration-200 group-hover:text-zinc-300">
                 {exp.company} · {exp.type}
               </p>
               <span className="mt-1 block font-mono text-xs text-zinc-600">

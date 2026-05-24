@@ -53,6 +53,7 @@ body {
   background: #7c3aed;
   top: -10%;
   left: -10%;
+  animation: blob-drift-1 22s ease-in-out infinite;
 }
 
 .blob-2 {
@@ -61,6 +62,7 @@ body {
   background: #2563eb;
   top: 40%;
   right: -10%;
+  animation: blob-drift-2 28s ease-in-out 6s infinite;
 }
 
 .blob-3 {
@@ -69,6 +71,22 @@ body {
   background: #059669;
   bottom: 0;
   left: 30%;
+  animation: blob-drift-3 19s ease-in-out 12s infinite;
+}
+
+@keyframes blob-drift-1 {
+  0%, 100% { transform: scale(1) translate(0px, 0px); }
+  50%       { transform: scale(1.1) translate(-18px, 22px); }
+}
+
+@keyframes blob-drift-2 {
+  0%, 100% { transform: scale(1) translate(0px, 0px); }
+  50%       { transform: scale(0.94) translate(22px, -18px); }
+}
+
+@keyframes blob-drift-3 {
+  0%, 100% { transform: scale(1) translate(0px, 0px); }
+  50%       { transform: scale(1.07) translate(-12px, -22px); }
 }
 
 /* Grid overlay */
@@ -141,6 +159,20 @@ body {
     border-color 0.4s ease,
     background-color 0.4s ease;
   will-change: transform;
+}
+
+.bento-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    500px circle at var(--mouse-x, -999px) var(--mouse-y, -999px),
+    rgba(255, 255, 255, 0.04),
+    transparent 40%
+  );
+  z-index: 0;
+  pointer-events: none;
 }
 
 .bento-card:hover {

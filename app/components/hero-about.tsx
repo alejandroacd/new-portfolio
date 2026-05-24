@@ -1,10 +1,39 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { profile } from "@/app/lib/profile";
+
+function useTextScramble(text: string) {
+  const [display, setDisplay] = useState(text);
+  const frameRef = useRef<number>(0);
+  const iterRef = useRef(0);
+
+  const trigger = useCallback(() => {
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ@#$%&';
+    iterRef.current = 0;
+    cancelAnimationFrame(frameRef.current);
+    const animate = () => {
+      iterRef.current += 0.45;
+      setDisplay(
+        text.split('').map((char, i) =>
+          char === ' ' ? ' ' :
+          i < Math.floor(iterRef.current) ? char :
+          chars[Math.floor(Math.random() * chars.length)]
+        ).join('')
+      );
+      if (iterRef.current < text.length) {
+        frameRef.current = requestAnimationFrame(animate);
+      }
+    };
+    frameRef.current = requestAnimationFrame(animate);
+  }, [text]);
+
+  useEffect(() => () => { cancelAnimationFrame(frameRef.current); }, []);
+  return { display, trigger };
+}
 import { BioCard } from "@/app/components/memories/bio-card";
 import { LocationCard } from "@/app/components/memories/location-card";
 import { SpotifyCard } from "@/app/components/memories/spotify-card";
@@ -52,9 +81,27 @@ export function HeroAbout() {
     return () => ctx.revert();
   }, []);
 
+  const { display: scrambledName, trigger: scrambleName } = useTextScramble("Contreras");
+
   const handleScroll = (href: string) => {
     const el = document.querySelector(href);
     if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handleGridMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const cards = gridRef.current?.querySelectorAll<HTMLElement>(".bento-card");
+    cards?.forEach((card) => {
+      const rect = card.getBoundingClientRect();
+      card.style.setProperty("--mouse-x", `${e.clientX - rect.left}px`);
+      card.style.setProperty("--mouse-y", `${e.clientY - rect.top}px`);
+    });
+  };
+
+  const handleGridMouseLeave = () => {
+    gridRef.current?.querySelectorAll<HTMLElement>(".bento-card").forEach((card) => {
+      card.style.setProperty("--mouse-x", "-999px");
+      card.style.setProperty("--mouse-y", "-999px");
+    });
   };
 
   return (
@@ -85,8 +132,11 @@ export function HeroAbout() {
                 <span className="hero-line-inner block">Ale</span>
               </span>
               <span className="block overflow-hidden pb-1">
-                <span className="hero-line-inner block gradient-text">
-                  Contreras
+                <span
+                  className="hero-line-inner block gradient-text cursor-default select-none"
+                  onMouseEnter={scrambleName}
+                >
+                  {scrambledName}
                 </span>
               </span>
             </h1>
@@ -118,6 +168,8 @@ export function HeroAbout() {
         {/* Bento grid */}
         <div
           ref={gridRef}
+          onMouseMove={handleGridMouseMove}
+          onMouseLeave={handleGridMouseLeave}
           className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 auto-rows-[minmax(140px,_auto)]"
         >
           <LocationCard />
