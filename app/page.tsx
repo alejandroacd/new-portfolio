@@ -22,9 +22,9 @@ export default function Home() {
         <Navbar />
         <HeroAbout />
 
-        <ProjectsSection />
-
         <MemoriesSection />
+
+        <ProjectsSection />
 
         <ExperienceSection />
 

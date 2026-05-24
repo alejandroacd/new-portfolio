@@ -25,7 +25,7 @@ const projects = [
     tags: ["React", "TypeScript", "Tailwind"],
     year: "2024",
     imgSrc: "/images/projects/quizzer/Captura%20de%20pantalla%202026-05-24%20015331.png",
-    link: "quizzer-v2.vercel.app",
+    link: "https://quizzer-v2.vercel.app",
     githubLink: "https://github.com/alejandroacd/quizzer-v2",
   },
     {

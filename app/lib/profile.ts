@@ -37,7 +37,7 @@ export const profile = {
   name: "Ale Contreras",
   taglineFirst: "Frontend Architect",
   taglineSecondary: "Coffee enthusiast · Buenos Aires",
-  bio: "Passionate about football, great food, and the probability math behind every poker hand. I shoot night light combinations, collect wine recommendations, and stay obsessed with where AI and dystopian aesthetics intersect. Based in Buenos Aires, always building.",
+  bio: "Football, great food, and the probability math behind every poker hand. I shoot night light combinations, collect wine recommendations, and stay obsessed with where AI and dystopian aesthetics intersect. Based in Buenos Aires, always building.",
   email: "alejandroalicd@gmail.com",
   avatar: "/images/PROFILE/IMG_4092.jpeg",
   location: {

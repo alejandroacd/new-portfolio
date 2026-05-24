@@ -83,6 +83,8 @@ export function HeroAbout() {
 
   const { display: scrambledName, trigger: scrambleName } = useTextScramble("Contreras");
 
+
+
   const handleScroll = (href: string) => {
     const el = document.querySelector(href);
     if (el) el.scrollIntoView({ behavior: "smooth" });
