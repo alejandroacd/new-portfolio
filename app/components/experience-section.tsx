@@ -8,19 +8,19 @@ gsap.registerPlugin(ScrollTrigger);
 
 const experiences = [
   {
-    role: "Front-End Architect",
+    role: "Frontend Architect",
     company: "Above + Beyond Management Consulting",
     type: "Full-time",
     period: "Jul. 2025 – Present",
-    location: "Buenos Aires · Remote",
+    location: "Buenos Aires / Canadá · Remote",
     description:
-      "Leading frontend architecture for enterprise clients. Building AI-powered interfaces, design systems, and high-performance web applications at scale.",
+      "Leading the design and implementation of scalable front-end architectures. Collaborating with cross-functional teams to define technical strategies, optimize performance, and ensure maintainable codebases. Technologies include React.js, TypeScript, and micro-frontend architectures. Manage AI integration for enhanced user experiences and development workflows.",
   },
   {
     role: "Frontend Developer",
     company: "Novakorp",
     type: "Full-time",
-    period: "Jul. 2023 – Present",
+    period: "Jul. 2023 – Jul. 2025",
     location: "Buenos Aires Province, Argentina · Remote",
     description:
       "Developing high-performance frontend components, managing complex application state, and handling API integrations within a collaborative engineering team. Stack includes Redux.js, Tailwind CSS, and more.",

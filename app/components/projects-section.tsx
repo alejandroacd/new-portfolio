@@ -9,13 +9,13 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
-    title: "Cosmic",
+    title: "Cosmic: AI Chat",
     description:
       "Chat interface powered by GPT-3 via Magic Loops endpoints. Built with Next.js 15 and Zustand, featuring a clean minimalist UI for distraction-free AI conversations.",
     tags: ["React", "TypeScript", "Tailwind"],
     year: "2025",
     imgSrc: "/images/projects/cosmic/Captura%20de%20pantalla%202026-05-24%20012207.png",
-    link: "cosmic-ai-chat.vercel.app",
+    link: "https://cosmic-ai-chat.vercel.app",
     githubLink: "https://github.com/alejandroacd/cosmic-ai-chat",
   },
     {
@@ -28,28 +28,8 @@ const projects = [
     link: "quizzer-v2.vercel.app",
     githubLink: "https://github.com/alejandroacd/quizzer-v2",
   },
-  {
-    title: "Spotify",
-    description:
-      "Browse a curated 2000s global hits playlist via the Spotify Web API. Sign in to save favorite tracks to your library, with an interactive carousel and optimistic UI.",
-    tags: ["Next.js", "TypeScript", "Tailwind"],
-    year: "2025",
-    imgSrc: "/images/projects/spotify/Captura%20de%20pantalla%202026-05-24%20012436.png",
-    link: "00s-global-hits.netlify.app/",
-    githubLink: "https://github.com/alejandroacd/spotify-global-hits",
-  },
-  {
-    title: "LeaderGene",
-    description:
-      "Assessment viewer for comparing LeaderGENE™ candidate profiles across seven psychometric traits, supporting both modern Quotient-based and legacy trait name formats.",
-    tags: ["React", "TypeScript", "Tailwind"],
-    year: "2024",
-    imgSrc: "/images/projects/leadergene/Captura%20de%20pantalla%202026-05-24%20013522.png",
-    link: "https://leadergene-profiles-comparison.vercel.app/",
-    githubLink: "https://github.com/alejandroacd/leadergene-profiles-comparison",
-  },
-  {
-    title: "360s",
+    {
+    title: "360s Feedback Report Validator",
     description:
       "Internal validation tool for 360-degree feedback report results, used to cross-check assessment data integrity within a larger organizational platform.",
     tags: ["React", "TypeScript", "Tailwind"],
@@ -59,9 +39,30 @@ const projects = [
     githubLink: "https://github.com/alejandroacd/360-combinations",
   },
   {
-    title: "Portfolio",
+    title: "Spotify 00's Global Hits Tracker",
     description:
-      "Personal portfolio website built with Next.js, TypeScript, and Tailwind CSS — deployed on Vercel with modern design and optimized font loading via the Geist family.",
+      "Browse a curated 2000s global hits playlist via the Spotify Web API. Sign in to save favorite tracks to your library, with an interactive carousel and optimistic UI.",
+    tags: ["Next.js", "TypeScript", "Tailwind"],
+    year: "2025",
+    imgSrc: "/images/projects/spotify/Captura%20de%20pantalla%202026-05-24%20012436.png",
+    link: "https://00s-global-hits.netlify.app/",
+    githubLink: "https://github.com/alejandroacd/spotify-global-hits",
+  },
+  {
+    title: "LeaderGENE™ Profiles Comparison Tool",
+    description:
+      "Assessment viewer for comparing LeaderGENE™ candidate profiles across seven psychometric traits, supporting both modern Quotient-based and legacy trait name formats.",
+    tags: ["React", "TypeScript", "Tailwind"],
+    year: "2024",
+    imgSrc: "/images/projects/leadergene/Captura%20de%20pantalla%202026-05-24%20013522.png",
+    link: "https://leadergene-profiles-comparison.vercel.app/",
+    githubLink: "https://github.com/alejandroacd/leadergene-profiles-comparison",
+  },
+
+  {
+    title: "Evaporada Portfolio",
+    description:
+      "Personal portfolio website built with Next.js, TypeScript, and Tailwind CSS — deployed on Vercel with modern design.",
     tags: ["Next.js", "GSAP", "Tailwind"],
     year: "2025",
     imgSrc: "/images/projects/portfolio/Captura%20de%20pantalla%202026-05-24%20013853.png",

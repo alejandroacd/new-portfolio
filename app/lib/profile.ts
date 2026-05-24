@@ -37,7 +37,7 @@ export const profile = {
   name: "Ale Contreras",
   taglineFirst: "Frontend Architect",
   taglineSecondary: "Coffee enthusiast · Buenos Aires",
-  bio: "Building polished interfaces by day, hunting good espresso by morning. Based in CABA, working remote with teams around the world. Always tinkering on side projects, always one more idea away from launching.",
+  bio: "Passionate about football, great food, and the probability math behind every poker hand. I shoot night light combinations, collect wine recommendations, and stay obsessed with where AI and dystopian aesthetics intersect. Based in Buenos Aires, always building.",
   email: "alejandroalicd@gmail.com",
   avatar: "/images/PROFILE/IMG_4092.jpeg",
   location: {
@@ -48,6 +48,21 @@ export const profile = {
   },
   spotifyEmbedUrl:
     "https://open.spotify.com/embed/playlist/0GOpCl2UTHwoP78WJq9bn7?si=i4101tHsRceJMyEq80FN4A",
+  spotifyPlaylist: {
+    tracks: [
+      { title: "Out Of Focus",                    artist: "Spratta",                       duration: "2:55" },
+      { title: "Timeless (feat. Playboi Carti)",  artist: "The Weeknd, Playboi Carti",     duration: "4:16" },
+      { title: "Afterthought",                    artist: "Joji, BENEE",                   duration: "3:14" },
+      { title: "Thinking Bout You",               artist: "rei brown, Joji",               duration: "3:10" },
+      { title: "Blue Seats (812)",                artist: "Jonathan May",                  duration: "3:31" },
+      { title: "2 On (feat. ScHoolboy Q)",        artist: "Tinashe, ScHoolboy Q",          duration: "3:47" },
+      { title: "LOVE YOU LESS",                   artist: "Joji",                          duration: "3:21" },
+      { title: "After Hours",                     artist: "The Weeknd",                    duration: "6:01" },
+      { title: "Breathe",                         artist: "88rising, Joji, Don Krez",      duration: "2:05" },
+      { title: "scared 2 die",                    artist: "451",                           duration: "3:19" },
+      { title: "TELL 'EM YOU'RE MINE",            artist: "alan vrong",                    duration: "2:38" },
+    ],
+  },
   socials: {
     github: {
       handle: "alejandroacd",
