@@ -74,7 +74,7 @@ export function ExperienceSection() {
       ref={sectionRef}
       className="relative z-10 px-8 py-24 md:px-16"
     >
-      <p className="section-label mb-12">Experience</p>
+      <p className="section-label mb-12">Tech Experience</p>
 
       <div className="relative max-w-2xl">
         {/* Vertical line */}

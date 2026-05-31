@@ -126,9 +126,6 @@ export function HeroAbout() {
           </div>
 
           <div className="flex flex-col items-start gap-5">
-            <p className="hero-tagline font-mono text-xs tracking-[0.3em] text-zinc-500 uppercase">
-              {profile.taglineFirst}
-            </p>
             <h1 className="text-5xl font-black leading-[0.9] tracking-tighter md:text-7xl lg:text-8xl">
               <span className="block overflow-hidden pb-1">
                 <span className="hero-line-inner block">Ale</span>
